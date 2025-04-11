@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>i-unlock mo aq!</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <button id="music-toggle" style="position: fixed; top: 15px; right: 15px; z-index: 9999; background: pink; border: none; padding: 10px; border-radius: 10px;">
+        🔇 Music Off
+      </button>
+      
+  <div id="game-container">
+    <!-- Intro Screen -->
+    <div id="intro" class="screen active">
+      <h1>💖 Unlock me pls 💖</h1>
+      <p>Happy 3rd Monthsary, Babi!! 🥹</p>
+      <button onclick="startLevel1()">Start</button>
+    </div>
+
+    <!-- Level 1: Memory Match -->
+    <div id="level1" class="screen">
+      <h2>Level 1: Memory Match</h2>
+      <div id="memory-game"></div>
+      <button onclick="checkLevel1()">I'm Done</button>
+    </div>
+
+    <!-- Level 2: Love Quiz -->
+    <div id="level2" class="screen">
+      <h2>Level 2: Love Quiz</h2>
+      <div id="quiz">
+        <p>What did we eat on our first date? 🍱</p>
+        <button onclick="quizAnswer(true)">Pepper Lunch</button>
+        <button onclick="quizAnswer(false)">Samgyupsalamat</button>
+        <button onclick="quizAnswer(false)">SumoNiku</button>
+      </div>
+    </div>
+
+    <!-- Level 3: Drag Hearts Game -->
+    <div id="level3" class="screen">
+      <h2>Level 3: Heart Puzzle 💘</h2>
+      <p>Drag the hearts into the glowing box to complete the final challenge!</p>
+      <div id="drag-zone">
+        <div class="heart" draggable="true">❤️</div>
+        <div class="heart" draggable="true">💕</div>
+        <div class="heart" draggable="true">💗</div>
+      </div>
+      <div id="drop-zone">Drop here</div>
+      <button onclick="checkLevel3()">Submit</button>
+    </div>
+
+    <!-- Final Message -->
+    <div id="final" class="screen">
+      <h2>🎉 You Unlocked My Heart 🎉</h2>
+      <p id="final-message">Hi Mahal Happy Monthsary, sorry kung this past few days sobrang busy talaga, capstone ang sisira ng buhay ko, kailangan na kita makasama
+       sorry rin babi kasi this past few days medyo nagkaroon tayo ng pag aaway at hindi pagkakaintindihan, sana mapatawad mo rin ako sa mga pagkukulang at mga kasalanan ko, mahal na mahal ktia sobra mahal, sana makapag date na tayo kapag hindi 
+       tayo pag hindi na busy. Mahal na mahal kita sobra babi mwaaaa!! Ingat sa korea bebe and Advance Happy Birthday mwaps luv u so much💌</p>
+       <img src="assets/final-cute.gif" alt="cute gif" class="big-heart" />
+    </div>
+  </div>
+
+  <!-- Modal Popup -->
+<div id="popup-modal" class="modal">
+    <div class="modal-content">
+      <h2 id="modal-title">🎉 Congrats!</h2>
+      <p id="modal-message">Your custom message goes here...</p>
+      <button id="modal-btn">Continue</button>
+    </div>
+  </div>
+  
+
+  <script src="script.js"></script>
+</body>
+</html>
